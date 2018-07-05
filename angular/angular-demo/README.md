@@ -1,3 +1,23 @@
+
+# DNUG Angular
+## Ablauf Demo
+- Anzeigen von String (Hardcoded und als Variable)
+- Input hinzufügen -> Werte verändern und in View ausgeben (evtl State?)
+
+## Aufsetzen eines Projekts
+- CLI installieren
+- Projekt über CLI erstellen
+  - Erstellt Grundstruktur
+  - Inklusive Tests und E2E-Tests
+  - Erstellung kann mittels CLI-Parametern konfiguriert werden.
+- Über `ng serve` kann der dev-Server gestartet werden.
+
+## Demo
+### 
+
+---
+---
+
 # AngularDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
