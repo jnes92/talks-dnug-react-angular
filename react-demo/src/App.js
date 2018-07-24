@@ -7,7 +7,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      input: ''
+      input: '',
+      showGreeting: false
     }
   }
 
@@ -16,7 +17,7 @@ class App extends Component {
   }
 
   handleButtonClick = () => {
-    console.log("User clicked the button.");
+    this.setState({showGreeting: !this.state.showGreeting});
   }
 
   render() {
@@ -36,6 +37,8 @@ class App extends Component {
           onChange={this.changeInputValue} type="text" 
         />
         <button onClick={this.handleButtonClick}> Say Hello ! </button>
+        {this.state.showGreeting ? <p> Sei gegrüßt, {this.state.input} ! </p>: null}
+        {this.state.showGreeting && <p> Sei gegrüßt, {this.state.input} ! </p>}
       </div>
     );
   }

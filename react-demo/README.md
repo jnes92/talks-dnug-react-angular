@@ -71,6 +71,7 @@ Dadurch vereinfacht sich unsere Render Funktion enorm:
 
 Nun wollen wir den aktuellen Input Wert nicht nur in der Konsole ausgeben, sondern auch den aktuellen User begrüßen. Es soll eine Willkommensnachricht eingeblendet werden, nachdem der User auf den Button gedrückt hat.
 
+a) User Input Wert.
 Aber fangen wir erstmal damit an, die aktuelle Eingabe des Users innerhalb unserer Komponente zu speichern.
 Dafür gibt es den Komponenten-State, diesen muss man innerhalb des Constructors definieren.
 
@@ -93,4 +94,24 @@ Um nun auch den Wert in dieser State-Variable zu speichern können wir unsere Fu
 '''    this.setState({input: e.target.value})
 '''  }
 
+ACHTUNG:
+nur im Konstruktor wird this.state direkt zugewiesen, ansonsten bekommt React nicht mit, dass der Wert geändert wird. Jedes ändern des States über die Funktion setState() triggert einen neuen Render() Vorgang und wir erhalten so die aktuellen Werte !
+
 Danach können wir uns entweder wie vorher über einen console.log den aktuellen Wert aus dem State anzeigen oder in Chrome mit der Erweiterung React-Developer-Tools den State aus der Komponente anzeigen.
+
+b) Anzeige der Willkommensnachricht:
+
+Als erstes ergänzen wir die Render Funktion um einen weiteren Paragraphen:
+''' <p> Sei gegrüßt, {this.state.input} ! </p>
+Aktuell wird dieser Text, aber immer angezeigt. Wir wollen jedoch, dass der Text erst nach dem Klick auf den Button angezeigt wird.
+Auch hier für können wir den State nutzen.
+
+Wir ergänzen unseren initialen State um eine Variable 'showGreeting: false'. 
+Nun können wir die Möglichkeiten von JSX auch direkt in der Render Funktion nutzen, um zu prüfen, ob showGreeting true ist.
+
+2 Alternativen:
+
+'''        {this.state.showGreeting ? <p> Sei gegrüßt, {this.state.input} ! </p>: null}
+'''        {this.state.showGreeting && <p> Sei gegrüßt, {this.state.input} ! </p>}
+
+Als letzten Mini Schritt müssen wir nun nur noch den State ändern, nachdem wir auf den Button geklickt haben und wir können unsere App wie gewünscht nutzen.
