@@ -30,6 +30,10 @@
   - Inputs mit Klammern versehen: `(click)="doMagic()"`
   - Outputs werden mit eckigen Kalmmern versehen: `[someAttribute]="myVar"`
   - Two-Way-Binding verwendet beides zusammen (Die Banane in der Box): `[(someAttribute)]="someValue"`
+
+#### Two-Way-Binding 
+Einbinden von `FormsModule` ist für das Two-Way-Binding auf `ngModule` nötig.
+
 ---
 ---
 
