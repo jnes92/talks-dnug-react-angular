@@ -67,3 +67,30 @@ Dadurch vereinfacht sich unsere Render Funktion enorm:
 ''<input onChange={this.changeInputValue} type="text" />
 ''<button onClick={this.handleButtonClick}> Say Hello ! </button>
 
+6. Der Komponenten State
+
+Nun wollen wir den aktuellen Input Wert nicht nur in der Konsole ausgeben, sondern auch den aktuellen User begrüßen. Es soll eine Willkommensnachricht eingeblendet werden, nachdem der User auf den Button gedrückt hat.
+
+Aber fangen wir erstmal damit an, die aktuelle Eingabe des Users innerhalb unserer Komponente zu speichern.
+Dafür gibt es den Komponenten-State, diesen muss man innerhalb des Constructors definieren.
+
+'''   constructor(props){
+    super(props);
+
+    this.state = {
+      input: ''
+    }
+  }
+'''
+
+Als nächstes wollen wir nun das unser Input Feld aus der Render Funktion immer den aktuellen Wert aus dem State anzeigt.
+Dafür ergänzen wir unser Input Tag mit dem Attribut 'value' und steuern so den angezeigten Wert.
+
+Danach stellen wir aber fest, dass unser Input Feld nicht mehr auf Eingaben reagiert. Das liegt aber ganz einfach daran, dass unsere Funktion nicht den Wert aus dem State aktualisiert und somit immer mit dem gleichen Wert gerendert wird.
+
+Um nun auch den Wert in dieser State-Variable zu speichern können wir unsere Funktionen leicht anpassen.
+'''   changeInputValue = (e) => {
+'''    this.setState({input: e.target.value})
+'''  }
+
+Danach können wir uns entweder wie vorher über einen console.log den aktuellen Wert aus dem State anzeigen oder in Chrome mit der Erweiterung React-Developer-Tools den State aus der Komponente anzeigen.

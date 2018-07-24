@@ -3,8 +3,16 @@ import logo from './logo.png';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      input: ''
+    }
+  }
+
   changeInputValue = (e) => {
-    console.log(e.target.value);
+    this.setState({input: e.target.value})
   }
 
   handleButtonClick = () => {
@@ -23,7 +31,10 @@ class App extends Component {
         <p className="App-intro">
           Bitte gib deinen Namen ein:
         </p>
-        <input onChange={this.changeInputValue} type="text" />
+        <input 
+          value={this.state.input}
+          onChange={this.changeInputValue} type="text" 
+        />
         <button onClick={this.handleButtonClick}> Say Hello ! </button>
       </div>
     );
