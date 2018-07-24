@@ -27,7 +27,22 @@ Bilder werden zunächst per import ''import logo from './logo.png';'' geladen un
 
 -> Hier sehen wir das erste Mal eine neue Funktion mit JSX. wir können ganz einfach das oben geladene Bild als Variable verwenden und dem src Attribut zuweisen.
 
-c) Anzeige von Text aus Variablen:
+3. Anzeige von Text aus Variablen:
 Nun wissen wir ja bereits, dass wir im JSX Code auch direkt Variablen verwenden können, also lagern wir die Willkommensnachricht in einen String aus.
 
 Dafür definieren wir einfach eine Variable oberhalb des return statements. In JSX kann man jederzeit JavaScript verwenden, dafür muss man einfach die {} verwenden.
+
+4. Reagieren auf Events
+
+Als nächstes wollen wir uns Events genauer ansehen. Dafür erstellen wir uns erst einmal mit html ein input Feld sowie einen button zum bestätigen der Text Eingabe.
+
+a) onChange Event mit einem Text Input:
+''' <input type="text" />
+Wir fügen ein einfaches Event hinzu:
+''' <input onChange={(e) => console.log(e.target.value)} type="text" />
+Hier deklarieren wir innerhalb der geschweiften Klammern eine Funktion die mit dem Event Parameter e aufgerufen wird und danach eine Konsolenausgabe mit dem aktuellen Wert startet.
+
+b) onClick Event mit Button
+Für den Button geht das genauso, der Event Handler dafür ist ''onClick''
+
+

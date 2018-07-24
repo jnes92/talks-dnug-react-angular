@@ -14,8 +14,10 @@ class App extends Component {
           <h1 className="App-title">{message}</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Bitte gib deinen Namen ein:
         </p>
+        <input onChange={(e) => console.log(e.target.value)} type="text" />
+        <button onClick={() => console.log("User clicked the button.")}> Say Hello ! </button>
       </div>
     );
   }
