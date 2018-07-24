@@ -46,3 +46,24 @@ b) onClick Event mit Button
 Für den Button geht das genauso, der Event Handler dafür ist ''onClick''
 
 
+5. Deklarieren von Hilfsmethoden in einer Componente
+Time to REFACTOR :D
+
+Aktuell haben wir 2 Funktionen innerhalb der Render Funktion deklariert (sogar schlimmer, innerhalb der Tags: input / button).
+Das wollen wir möglichst schnell ändern, damit unser Code gut lesbar bleibt =) 
+
+Dafür müssen wir nur 2 Funktionen innerhalb der Komponente deklarieren:
+''' 
+  changeInputValue = (e) => {
+    console.log(e.target.value);
+  }
+
+  handleButtonClick = () => {
+    console.log("User clicked the button.");
+  }
+'''
+
+Dadurch vereinfacht sich unsere Render Funktion enorm:
+''<input onChange={this.changeInputValue} type="text" />
+''<button onClick={this.handleButtonClick}> Say Hello ! </button>
+

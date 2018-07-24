@@ -3,8 +3,15 @@ import logo from './logo.png';
 import './App.css';
 
 class App extends Component {
-  render() {
+  changeInputValue = (e) => {
+    console.log(e.target.value);
+  }
 
+  handleButtonClick = () => {
+    console.log("User clicked the button.");
+  }
+
+  render() {
     const message='Willkommen bei der .NET UG in Koblenz!';
 
     return (
@@ -16,8 +23,8 @@ class App extends Component {
         <p className="App-intro">
           Bitte gib deinen Namen ein:
         </p>
-        <input onChange={(e) => console.log(e.target.value)} type="text" />
-        <button onClick={() => console.log("User clicked the button.")}> Say Hello ! </button>
+        <input onChange={this.changeInputValue} type="text" />
+        <button onClick={this.handleButtonClick}> Say Hello ! </button>
       </div>
     );
   }
