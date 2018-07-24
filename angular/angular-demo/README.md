@@ -24,6 +24,12 @@
 - Variablen werden in der dazugehörigen `app.component.ts` definiiert und geändert. 
   - Variablen sind dabei 
 
+### Reagieren auf Events
+- Events aus dem HTML heraus sind bei Angular Outputs. Diese werden im Markup als html Attribute mit angegeben.
+- Semantic Sugar: Um visuell zwischen den Data-Bindings (Input, Output oder Two-Way) zu unterscheiden, werden 
+  - Inputs mit Klammern versehen: `(click)="doMagic()"`
+  - Outputs werden mit eckigen Kalmmern versehen: `[someAttribute]="myVar"`
+  - Two-Way-Binding verwendet beides zusammen (Die Banane in der Box): `[(someAttribute)]="someValue"`
 ---
 ---
 

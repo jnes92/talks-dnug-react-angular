@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   eventName = '.Net UG Koblenz';
+  sayHello() {
+    if (this.myName.length > 0) {
+      this.nameLabelIsVisible = true;
+    }
+  }
 }
