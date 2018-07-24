@@ -8,4 +8,6 @@
   <p>Gib deinen Namen hier an: </p>
   <input type="text" [(ngModel)]="myName"/>
   <button (click)="sayHello()">Sag Hallo</button>
+
+  <h2 *ngIf="nameLabelIsVisible">Hallo {{myName}}</h2>
 </div>

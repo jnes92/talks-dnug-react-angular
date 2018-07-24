@@ -34,6 +34,21 @@
 #### Two-Way-Binding 
 Einbinden von `FormsModule` ist für das Two-Way-Binding auf `ngModule` nötig.
 
+### State Veränderungen
+- Lokaler State ist die Komponenen-Klasse. Es ist alles intern für die angezeigt View.
+- Globaler State über die Provider (Servies) ermöglicht.
+  - Durch die Dependency Injection haben die Komponenten stets die aktuellen Werte, wenn diese benötigt werden.
+
+
+
+
+## Versionierung
+Semver für die Versionen. Größere Änderungen passieren zwischen den einzelnen Versionen.
+> Welche?
+
+
+
+
 ---
 ---
 
