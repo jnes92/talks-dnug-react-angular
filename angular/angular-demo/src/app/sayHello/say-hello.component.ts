@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'say-hello',
     templateUrl: './say-hello.component.html'
 })
 export class SayHello {
-    myName = '';
+    @Input() myName = '';
     nameLabelIsVisible = false;
 
     sayHello() {
