@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import logo from "./logo.png";
 import "./App.css";
 
+const DisplayGreetingStateless = () => {
+  return <p> Sei gegrüßt, this.state.input ! </p>;
+}
+
 class SayHelloComponent extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +35,7 @@ class SayHelloComponent extends Component {
           type="text"
         />
         <button onClick={this.handleButtonClick}> Say Hello ! </button>
-        {this.state.showGreeting && <p> Sei gegrüßt, {this.state.input} ! </p>}
+        {this.state.showGreeting && <DisplayGreetingStateless /> }
       </div>
     );
   }
