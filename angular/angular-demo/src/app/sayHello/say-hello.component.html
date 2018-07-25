@@ -2,5 +2,4 @@
 
 <input type="text" [(ngModel)]="myName"/>
 <button (click)="sayHello()">Sag Hallo</button>
-
-<h2 *ngIf="nameLabelIsVisible">Hallo {{myName}}</h2>
+<greeting-label *ngIf="nameLabelIsVisible" greetingName="{{myName}}"></greeting-label>

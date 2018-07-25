@@ -39,7 +39,11 @@ Einbinden von `FormsModule` ist für das Two-Way-Binding auf `ngModule` nötig.
 - Globaler State über die Provider (Servies) ermöglicht.
   - Durch die Dependency Injection haben die Komponenten stets die aktuellen Werte, wenn diese benötigt werden.
 
+### Komponenten Erstellung
 
+### Properties
+- Properties können von der Parent-Komponente als Input, Output oder Two-Way-Binding an einer Child-Komponente weitergegeben werden.
+- Im Beispiel wird als Input die Variable `myName` definiert, welche im Parent den Wert `DNUG` gesetzt bekommt.
 
 
 ## Versionierung
