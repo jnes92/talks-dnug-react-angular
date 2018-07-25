@@ -149,3 +149,10 @@ Eine Komponente kann durch verschiedene Properties als Generallösung erstellt w
 ....
 
 Nun haben wir noch unsere funktionale Komponente, die wieder den aktuellen Namen ausgeben soll, also übergeben wir ihr auch Props.
+
+Dadurch können wir einfach in der App.js die Komponente mehrfach aufrufen:
+
+'''         <SayHelloComponent defaultValue=".NET Usergroup" />
+'''        <SayHelloComponent defaultValue="Daniel Varela" />
+'''        <SayHelloComponent defaultValue="Jonas Österle" />
+   

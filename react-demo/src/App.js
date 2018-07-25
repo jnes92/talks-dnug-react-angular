@@ -13,7 +13,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{message}</h1>
         </header>
+        <SayHelloComponent defaultValue=".NET Usergroup" />
         <SayHelloComponent defaultValue="Daniel Varela" />
+        <SayHelloComponent defaultValue="Jonas Österle" />
       </div>
     );
   }
