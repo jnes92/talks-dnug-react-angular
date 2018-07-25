@@ -115,3 +115,23 @@ Nun können wir die Möglichkeiten von JSX auch direkt in der Render Funktion nu
 '''        {this.state.showGreeting && <p> Sei gegrüßt, {this.state.input} ! </p>}
 
 Als letzten Mini Schritt müssen wir nun nur noch den State ändern, nachdem wir auf den Button geklickt haben und wir können unsere App wie gewünscht nutzen.
+
+7. Erstellen einer eigenen Komponente
+Wenn die App größer wird, dann ist es an der Zeit eine eigene Komponente für einen Teil der Anwendung zu erstellen.
+
+Wir beginnen indem wir innerhalb der App.js eine neue Class erstellen, die von **React.Component** erbt.
+
+Es gibt 2 unterschiedliche Arten von Komponenten, diese nenen sich stateless & stateful components (manchmal auch  funktional, class-based Komponente.) Wir zeigen in dem Beispiel beide.
+
+Zunächst erstellen wir eine Klasse: SayHelloComponent.
+Diese soll wie die AppComponent vorher wieder den Namen über den lokalen Komponenten State steuern.
+Immer wenn wir den State verwenden wollen, müssen wir eine state-full component (oder auch class-based component) verwenden.
+
+Außerdem wollen wir unsere Hilfsfunktionen aus der App direkt mit in die Komponente ziehen.
+
+-> 2 Gründe für eine class-based component.
+
+
+
+
+8. Benutzen von props
