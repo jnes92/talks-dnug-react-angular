@@ -132,6 +132,11 @@ Außerdem wollen wir unsere Hilfsfunktionen aus der App direkt mit in die Kompon
 -> 2 Gründe für eine class-based component.
 
 
+An der Stelle wollen wir den Code auch wieder etwas aufräumen... 
+Jede Komponente sollte in einer eigenen Datei verwaltet werden.
+
+Danach müssen wir die beiden Klassen innerhalb der Datei auch noch exportieren, damit wir sie innerhalb anderer Code Dateien nutzen können.
+
 
 
 8. Benutzen von props
