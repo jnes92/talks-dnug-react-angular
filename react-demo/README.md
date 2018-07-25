@@ -116,7 +116,7 @@ Nun können wir die Möglichkeiten von JSX auch direkt in der Render Funktion nu
 
 Als letzten Mini Schritt müssen wir nun nur noch den State ändern, nachdem wir auf den Button geklickt haben und wir können unsere App wie gewünscht nutzen.
 
-7. Erstellen einer eigenen Komponente
+8. Erstellen einer eigenen Komponente
 Wenn die App größer wird, dann ist es an der Zeit eine eigene Komponente für einen Teil der Anwendung zu erstellen.
 
 Wir beginnen indem wir innerhalb der App.js eine neue Class erstellen, die von **React.Component** erbt.
@@ -139,4 +139,13 @@ Danach müssen wir die beiden Klassen innerhalb der Datei auch noch exportieren,
 
 
 
-8. Benutzen von props
+9. Benutzen von props
+
+Um nun aus der Parent-Komponente App.js unserer Komponente SayHello einige Parameter übergeben zu können, wollen wir das Prinzip der Properties erklären.
+
+Eine Komponente kann durch verschiedene Properties als Generallösung erstellt werden. Wir möchten zu Beginn einen **defaultValue** für unser input definieren. 
+
+
+....
+
+Nun haben wir noch unsere funktionale Komponente, die wieder den aktuellen Namen ausgeben soll, also übergeben wir ihr auch Props.

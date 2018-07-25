@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{message}</h1>
         </header>
-        <SayHelloComponent />
+        <SayHelloComponent defaultValue="Daniel Varela" />
       </div>
     );
   }

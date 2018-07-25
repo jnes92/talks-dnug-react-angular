@@ -1,7 +1,9 @@
 import React from 'react';
 
-const DisplayGreetingStateless = () => {
-    return <p> Sei gegrüßt, this.state.input ! </p>;
+const DisplayGreetingStateless = (props) => {
+    if (props.show)
+    return <p> Sei gegrüßt, {props.value} ! </p>;
+    else return null;
   }
 
 export default DisplayGreetingStateless;

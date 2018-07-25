@@ -7,7 +7,7 @@ class SayHelloComponent extends Component {
       super(props);
   
       this.state = {
-        input: "",
+        input: props.defaultValue,
         showGreeting: false
       };
     }
@@ -23,7 +23,8 @@ class SayHelloComponent extends Component {
   
     render() {
       return (
-        <div>
+        <div style={{border: '1px solid black'}}>
+            <p> Dein Property: {this.props.defaultValue} </p>
           <p className="App-intro">Bitte gib deinen Namen ein:</p>
           <input
             value={this.state.input}
@@ -31,7 +32,7 @@ class SayHelloComponent extends Component {
             type="text"
           />
           <button onClick={this.handleButtonClick}> Say Hello ! </button>
-          {this.state.showGreeting && <DisplayGreetingStateless /> }
+          <DisplayGreetingStateless value={this.state.input} show={this.state.showGreeting} />
         </div>
       );
     }
