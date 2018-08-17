@@ -10,3 +10,8 @@ Den Vortrag wollen wir mit einer Diskussionsrunde abschließen um persönliche P
 
 ### Über die Vortragenden:
 Jonas Österle und Daniel Varela sind Softwareentwickler der BRICKMAKERS GmbH in Koblenz. Beide beschäftigen sich mit neuen Technologien mit dem Schwerpunkt Mobile- und Webentwicklung (u.a. React, React Native, .NET Core, GraphQL, node.js).
+
+
+### Zur Präsentation:
+
+https://jnes92.github.io/dnug-react-angular/#/
